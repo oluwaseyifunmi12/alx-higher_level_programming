@@ -3,8 +3,12 @@
 
 
 class Rectangle:
+    """ A rectangle class
+    Attrributes:
+        number_of_instances(int): shows the number on instance of the rectangle
+    """
+
     number_of_instances = 0
-    """ A rectangle class"""
 
     def __init__(self, width=0, height=0):
         """
