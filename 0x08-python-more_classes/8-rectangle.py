@@ -6,7 +6,7 @@ class Rectangle:
     """Represent a rectangle.
     Attributes:
         number_of_instances (int): The number of Rectangle instances.
-        print_symbol (any): string representation 
+        print_symbol (any): string representation
     """
     number_of_instances = 0
     print_symbol = "#"
@@ -86,12 +86,12 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
 
-        rectangle = []
+        rec = []
         for i in range(self.__height):
-            [rectangle.append(str(self.print_symbol)) for j in range(self.__width)]
+            [rec.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
-                rectangle.append("\n")
-        return ("".join(rectangle))
+                rec.append("\n")
+        return ("".join(rec))
 
     def __repr__(self):
         """Return a string representation of the Rectangle using #"""
