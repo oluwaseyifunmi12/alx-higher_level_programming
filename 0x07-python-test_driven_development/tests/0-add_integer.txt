@@ -15,5 +15,22 @@ Now use it:
 	5
 
 	Works for float
+
 >>> add_integer(2.0, 3.0)
-	5.0
+	5
+
+	Second value is optional
+
+>>> add_integer(2)
+	100
+
+	works for negative numbers
+
+>>> add_integer(2.0, -3.0)
+	-1
+
+	raises errors for non-numbers
+
+	>>> add_integer(2.0, "string")
+	Traceback (most recent call last):
+		TypeError: a must be an integer
