@@ -48,7 +48,7 @@ This module defines an integer addition function ```matrix_divided(matrix, div)`
     [[]]
 
     >>> matrix = [
-    ...     [1, 2, a],
+    ...     [1, 2, 3],
     ...     [4, "string", 6]
     ... ]
     >>> print(matrix_divided(matrix, 3))
