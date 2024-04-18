@@ -1,0 +1,56 @@
+Text file for ``7-base_geometry.py``
+===================================
+
+Using ``BaseGeometry``
+----------------------
+
+This module defines a base_geometry class"
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
+Printing the area
+    >>> bg = BaseGeometry()
+    >>> bg.area
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+
+Printing with non-integer values
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Vickky", "a")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+
+Printing with values less than 0
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Vickky", -2)
+    Traceback (most recent call last):
+    ValueError: name must be greater than 0
+
+
+Printing with 0
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Vickky", 0)
+    Traceback (most recent call last):
+    ValueError: name must be greater than 0
+
+
+Printing with boolean value
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Vickky", True)
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+
+Printing with no arguments
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+
+Printing correct value
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("Vickky", 6)
