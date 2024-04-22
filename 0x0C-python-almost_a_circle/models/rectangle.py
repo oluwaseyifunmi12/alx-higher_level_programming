@@ -41,8 +41,6 @@ class Rectangle(Base):
             raise ValueError("width must be > 0")
         self.__width = value
 
-
-    @property
     def height(self):
         """get the height of the rectangle"""
         return self.__height
@@ -97,7 +95,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """A string form of the rectangle details"""
-        return ("[Rectangle] ({}) {}/{} - {}/{}". format(self.id, self.x, self.y, self.width, self.height ))
+        return ("[Rectangle] ({}) {}/{} - {}/{}".
+                format(self.id, self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
         """Updates the rectangle details"""
@@ -115,3 +114,12 @@ class Rectangle(Base):
         else:
             for key, value in kwargs.items():
                 setattr(self, key, value)
+
+    def to_dictionary(self):
+        return {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
