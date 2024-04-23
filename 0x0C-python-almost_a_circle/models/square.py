@@ -5,6 +5,7 @@ from models.rectangle import Rectangle
 
 class Square(Rectangle):
     """A square class that inherits from rectangle"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """Initializes a square class
 
@@ -18,8 +19,8 @@ class Square(Rectangle):
 
     def __str__(self):
         """A string representation of the square details"""
-        return "[Square] ({}) {}/{} - {}".
-                format(self.id, self.x, self.y, self.width or self.height)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
 
     @property
     def size(self):
