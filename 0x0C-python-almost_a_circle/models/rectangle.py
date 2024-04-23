@@ -21,11 +21,11 @@ class Rectangle(Base):
             Valueerror: if width or height is less than or equal 0
             Valueerror: if x or y is less than 0
         """
-        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -40,7 +40,7 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
-    
+
     @property
     def height(self):
         """get the height of the rectangle"""
@@ -99,8 +99,8 @@ class Rectangle(Base):
         return ("[Rectangle] ({}) {}/{} - {}/{}".
                 format(self.id, self.x, self.y, self.width, self.height))
 
-    def update(self, *args, **kwargs):
-        """Updates the rectangle details"""
+        def update(self, *args, **kwargs):
+            """Updates the rectangle details"""
         if args:  # If *args exists and is not empty, skip **kwargs
             if len(args) >= 1:
                 self.id = args[0]
@@ -118,9 +118,9 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         return {
-            'id': self.id,
-            'width': self.width,
-            'height': self.height,
-            'x': self.x,
-            'y': self.y
-        }
+                'id': self.id,
+                'width': self.width,
+                'height': self.height,
+                'x': self.x,
+                'y': self.y
+                }
