@@ -1,0 +1,1 @@
+More on JavaScript: classes and objects
