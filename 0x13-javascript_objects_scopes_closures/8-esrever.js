@@ -1,4 +1,4 @@
-#!/usr/local/bin/node
+#!/usr/bin/node
 
 exports.esrever = function (list) {
   let start = list[0];
